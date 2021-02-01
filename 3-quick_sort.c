@@ -39,12 +39,12 @@ void quick__sort(int *array, size_t size, size_t tot_size, int *saved)
 {
 	unsigned int pivot = 0;
 
-	if (size > 0)
+	if (size > 1)
 	{
 		pivot = partition(array, pivot, size - 1, saved, tot_size);
+		quick__sort(array + pivot, size - pivot, tot_size, saved);
 		if (pivot)
 			quick__sort(array, pivot++, tot_size, saved);
-		quick__sort(array + pivot, size - pivot, tot_size, saved);
 	}
 }
 /**
