@@ -23,16 +23,16 @@
 void selection_sort(int *array, size_t size)
 {
 	unsigned int i = 0, j = 0, idx = 0;
-	int min, swp;
+	int swp;
 
 	if (size > 1)
 		for (i = 0; i < size - 1; i++)
 		{
-			min = array[i];
+			idx = i;
 
 			for (j = i + 1; j < size; j++)
-				if (array[j] < min)
-					min = array[j], idx = j;
+				if (array[j] < array[idx])
+					idx = j;
 
 			if (idx != i)
 			{
