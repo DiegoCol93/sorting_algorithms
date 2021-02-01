@@ -24,39 +24,38 @@ void insertion_sort_list(listint_t **list)
 
 	previous = *list;
 	current = previous->next;
-	while (current)
-	{
-		saved = previous;
-		if (current->n < previous->n)
+	if (list)
+		while (current)
 		{
 			saved = previous;
-			while (previous && previous->n > current->n)
+			if (current->n < previous->n)
 			{
-				/* Set pointers for node after current. */
-				previous->next = current->next;
-				if (current->next)
-					current->next->prev = previous;
-
-				previous = previous->prev; /* Move previous <-*/
-
-				if (previous) /* Set pointers accordingly. */
+				saved = previous;
+				while (previous && previous->n > current->n)
 				{
-					current->next = previous->next;
-					previous->next = current;
-					current->prev = previous;
+					/* Set pointers for node after current. */
+					previous->next = current->next;
+					if (current->next)
+						current->next->prev = previous;
+					previous = previous->prev; /* Move previous <-*/
+					if (previous) /* Set pointers accordingly. */
+					{
+						current->next = previous->next;
+						previous->next = current;
+						current->prev = previous;
+					}
+					else /* No previous so set the head. */
+					{
+						current->next = *list;
+						current->prev = NULL;
+						*list = current;
+					}
+					if (current->next)
+						current->next->prev = current;
+					print_list(*list);/* Print the list. */
 				}
-				else /* No previous so set the head. */
-				{
-					current->next = *list;
-					current->prev = NULL, *list = current;
-				}
-				if (current->next)
-					current->next->prev = current;
-
-				print_list(*list);/* Print the list. */
+				current = saved, previous = current->prev;
 			}
-			current = saved, previous = current->prev;
+			current = current->next, previous = previous->next;
 		}
-		current = current->next, previous = previous->next;
-	}
 }
