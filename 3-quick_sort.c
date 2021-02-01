@@ -21,7 +21,8 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	quick__sort(array, size, size, array);
+	if (size)
+		quick__sort(array, size, size, array);
 }
 /**
  * quick__sort - Auxiliary function for recursion in
