@@ -48,8 +48,11 @@ void selection_sort(int *array, size_t size);
 /* 3. quick_sort - Sorts an array of integers in ascending order. - - - - - -*/
 void quick_sort(int *array, size_t size);
 
+/* 3.0 quick__sort - Recursive auxiliary function for quick_sort. - - - - - -*/
+void quick__sort(int *array, size_t size, size_t tot_size, int *saved);
+
 /* 3.1 partition - Sorts array and divides based on the last index's value - */
-unsigned int partition(int *array, unsigned int low, unsigned int hig);
+size_t partition(int *array, size_t low, size_t hig, int *ptr, size_t size);
 
 
 #endif /* __FILE___H_ end if file header. */
