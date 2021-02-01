@@ -44,8 +44,7 @@ void quick__sort(int *array, size_t size, size_t tot_size, int *saved)
 		pivot = partition(array, pivot, size - 1, saved, tot_size);
 		if (pivot)
 			quick__sort(array, pivot++, tot_size, saved);
-		if (pivot <= size)
-			quick__sort(array + pivot, size - pivot, tot_size, saved);
+		quick__sort(array + pivot, size - pivot, tot_size, saved);
 	}
 }
 /**
@@ -79,6 +78,8 @@ size_t partition(int *array, size_t low, size_t hig, int *ptr, size_t size)
 			}
 			i++;
 		}
+	if (array[j] == array[i])
+		return (j);
 	if (array[i] != array[hig])
 	{
 		swp = array[hig];
