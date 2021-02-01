@@ -37,7 +37,7 @@ void quick_sort(int *array, size_t size)
  */
 void quick__sort(int *array, size_t size, size_t tot_size, int *saved)
 {
-	unsigned int pivot = 0;
+	size_t pivot = 0;
 
 	if (size > 1)
 	{
