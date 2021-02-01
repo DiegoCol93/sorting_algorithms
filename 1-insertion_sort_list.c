@@ -22,9 +22,10 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *current = NULL, *previous = NULL, *saved = NULL;
 
-	previous = *list;
-	current = previous->next;
 	if (list)
+	{
+		previous = *list;
+		current = previous->next;
 		while (current)
 		{
 			saved = previous;
@@ -58,4 +59,5 @@ void insertion_sort_list(listint_t **list)
 			}
 			current = current->next, previous = previous->next;
 		}
+	}
 }
