@@ -39,7 +39,7 @@ void quick__sort(int *array, size_t size, size_t tot_size, int *saved)
 {
 	unsigned int pivot = 0;
 
-	if (size > 1)
+	if (size > 0)
 	{
 		pivot = partition(array, pivot, size - 1, saved, tot_size);
 		if (pivot)
