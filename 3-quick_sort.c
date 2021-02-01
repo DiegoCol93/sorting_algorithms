@@ -66,7 +66,7 @@ size_t partition(int *array, size_t low, size_t hig, int *ptr, size_t size)
 	int swp = 0, pivot = array[hig];
 	size_t i = low, j = low;
 
-	for (j = low; j <= hig; j++)
+	for (j = low; j < hig; j++)
 		if (array[j] < pivot)
 		{
 			if (array[j] != array[i])
