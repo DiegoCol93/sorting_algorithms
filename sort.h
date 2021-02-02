@@ -64,7 +64,27 @@ void cocktail_sort_list(listint_t **list);
 /* 101.0 swp_fwd - Swaps forward two nodes of a linked list. - - - - - - - - */
 int swp_fwd(listint_t *current, listint_t **list);
 
-/* 101.1 swp_bck - Swaps backward two nodes of a linked list. - - - - - - - - */
+/* 101.1 swp_bck - Swaps backward two nodes of a linked list. - - - - - - - -*/
 int swp_bck(listint_t *current, listint_t **list);
+
+/* 102 counting_sort - Sorts an array in ascending order. - - - - - - - - - -*/
+void counting_sort(int *array, size_t size);
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*                           Merge sort functions                            */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* 103 merge_sort - Sorts an array of integers in ascending order. - - - - - */
+void merge_sort(int *array, size_t size);
+
+
+void merge(int *array, size_t size);
+void top_down_split(int *cpy, size_t idx_b, size_t idx_e, int* array);
+void top_down_merge(int *cpy, size_t idx_b, size_t idx_mid, size_t idx_e,
+		    int *array);
+void cpy_array(int *array, size_t idx_b, size_t idx_e, int *cpy);
+
+
+
 
 #endif /* __FILE___H_ end if file header. */
