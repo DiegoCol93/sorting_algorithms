@@ -58,8 +58,13 @@ size_t partition(int *array, size_t low, size_t hig, int *ptr, size_t size);
 /* 100. shell_sort - Sorts an array of integers in ascending order. - - - - -*/
 void shell_sort(int *array, size_t size);
 
-/* 101. cocktail_sort_list - Sorts a doubly linked list in ascending order. */
+/* 101. cocktail_sort_list - Sorts a doubly linked list in ascending order.  */
 void cocktail_sort_list(listint_t **list);
 
+/* 101.0 swp_fwd - Swaps forward two nodes of a linked list. - - - - - - - - */
+int swp_fwd(listint_t *current, listint_t **list);
+
+/* 101.1 swp_bck - Swaps backward two nodes of a linked list. - - - - - - - - */
+int swp_bck(listint_t *current, listint_t **list);
 
 #endif /* __FILE___H_ end if file header. */
