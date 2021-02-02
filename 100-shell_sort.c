@@ -24,24 +24,29 @@ void shell_sort(int *array, size_t size)
 	size_t h, in, out;
 	int stored;
 
+	/* Determine "gap interval." */
 	/*   from |    to   \/   | do     \/    */
-	for (h = 0; h < size / 3 ; h = h * 3 + 1)
+	for (h = 1; h < size; h = h * 3 + 1)
 	{} /* <--- this ends for loop at this line. */
 
+	h = (h - 1) / 3;
 	while (h > 0) /* Start while for the "gap" = h. */
 	{
 		for (out = h; out < size; out++) /* Move outer reference index. */
 		{
 			stored = array[out]; /* Store in case of swap. */
 			in = out; /* Set inner index to outer one. */
+
 			while (in > h - 1 && array[in - h] >= stored)
 			{/* While moving back the index gap distance. */
 				array[in] = array[in - h];
 				in = in - h; /* Move index back h distance. */
 			}
+
 			array[in] = stored; /* Write stored value. */
 		}
-		h = (h - 1) / 3; /* Divide the "gap" distance. */
+
+		h = h / 3; /* Divide the "gap" distance. */
 		print_array(array, size); /* Aaaaand... print.*/
 	}
 }
