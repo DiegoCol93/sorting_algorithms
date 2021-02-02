@@ -2,6 +2,7 @@
 #define __FILE___H_
 #include <stdio.h>
 #include <stdlib.h>
+
 /*---------------------------------------------------------------------------*/
 /*                            Given Structures.                              */
 /*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
@@ -56,5 +57,9 @@ size_t partition(int *array, size_t low, size_t hig, int *ptr, size_t size);
 
 /* 100. shell_sort - Sorts an array of integers in ascending order. - - - - -*/
 void shell_sort(int *array, size_t size);
+
+/* 101. cocktail_sort_list - Sorts a doubly linked list in ascending order. */
+void cocktail_sort_list(listint_t **list);
+
 
 #endif /* __FILE___H_ end if file header. */
