@@ -24,7 +24,7 @@ void counting_sort(int *array, size_t size)
 	int max, position, *count = NULL, *sorted = NULL;
 	size_t i;
 
-	if (!size || !array)
+	if (size < 2 || !array)
 		return;
 	/* Find the maximun value in the array. */
 	max = array[0];
