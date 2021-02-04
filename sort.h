@@ -76,10 +76,8 @@ void counting_sort(int *array, size_t size);
 
 /* 103 merge_sort - Sorts an array of integers in ascending order. - - - - - */
 void merge_sort(int *array, size_t size);
-
-
 void merge(int *array, size_t size);
-void top_down_split(int *cpy, size_t idx_b, size_t idx_e, int* array);
+void top_down_split(int *cpy, size_t idx_b, size_t idx_e, int *array);
 void top_down_merge(int *cpy, size_t idx_b, size_t idx_mid, size_t idx_e,
 		    int *array);
 void cpy_array(int *array, size_t idx_b, size_t idx_e, int *cpy);
