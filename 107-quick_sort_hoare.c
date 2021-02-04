@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
-* partition - hoare partiton scheme
+* partition_H - Hoare partiton scheme
 *
 * @array: array to sort
 * @size: array size
