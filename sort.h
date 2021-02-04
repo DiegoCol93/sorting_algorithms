@@ -81,8 +81,10 @@ void top_down_split(int *cpy, size_t idx_b, size_t idx_e, int *array);
 void top_down_merge(int *cpy, size_t idx_b, size_t idx_mid, size_t idx_e,
 		    int *array);
 void cpy_array(int *array, size_t idx_b, size_t idx_e, int *cpy);
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - -*/
 
-
+/* 107. quick_sort_hoare - Sorts quick */
+void quick_sort_hoare(int *array, size_t size);
 
 
 #endif /* __FILE___H_ end if file header. */
