@@ -10,7 +10,7 @@
 * Return: partition position
 *
 **/
-int partition(int *array, int lo, int hi, size_t size)
+int partition_H(int *array, int lo, int hi, size_t size)
 {
 	int pivot = array[hi];
 	int i = lo;
@@ -54,7 +54,7 @@ void qsort_hoare(int *array, int lo, int hi, size_t size)
 	if (lo < hi)
 	{
 		/* rearrange the elements across pivot */
-		position = partition(array, lo, hi, size);
+		position = partition_H(array, lo, hi, size);
 
 		/* recursion left to pivot*/
 		qsort_hoare(array, lo, position - 1, size);
